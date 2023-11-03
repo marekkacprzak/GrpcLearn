@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client", "client\client.csproj", "{5D34C3FC-F246-4288-8366-F917490C4384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "server", "server\server.csproj", "{19344C21-EFBC-4140-81B3-42FF30EF432C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "proto", "proto", "{C1DDB965-D5EA-4E7D-BB83-CC402D837F16}"
+	ProjectSection(SolutionItems) = preProject
+		proto\dummy.proto = proto\dummy.proto
+		proto\greating.proto = proto\greating.proto
+		proto\sumOfNumbers.proto = proto\sumOfNumbers.proto
+		proto\sqrt.proto = proto\sqrt.proto
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D34C3FC-F246-4288-8366-F917490C4384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D34C3FC-F246-4288-8366-F917490C4384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D34C3FC-F246-4288-8366-F917490C4384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D34C3FC-F246-4288-8366-F917490C4384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19344C21-EFBC-4140-81B3-42FF30EF432C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19344C21-EFBC-4140-81B3-42FF30EF432C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19344C21-EFBC-4140-81B3-42FF30EF432C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19344C21-EFBC-4140-81B3-42FF30EF432C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

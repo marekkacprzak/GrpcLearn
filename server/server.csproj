@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PreferredUILang>en</PreferredUILang>
+        <NoWarn>CS2002;CS8321</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.25.0" />
+      <PackageReference Include="Grpc" Version="2.46.6" />
+      <PackageReference Include="Grpc.Core" Version="2.46.6" />
+      <PackageReference Include="Grpc.Core.Api" Version="2.58.0" />
+      <PackageReference Include="Grpc.Reflection" Version="2.58.0" />
+      <PackageReference Include="Grpc.Tools" Version="2.59.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Protobuf Include="../proto/*.proto" OutputDir="%(RelativePath)models" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="models\" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="ssl\ca.crt" />
+      <EmbeddedResource Include="ssl\ca.crt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="ssl\server.crt" />
+      <EmbeddedResource Include="ssl\server.crt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="ssl\server.key" />
+      <EmbeddedResource Include="ssl\server.key">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>

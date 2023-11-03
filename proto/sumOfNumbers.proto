@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package sum;
+
+message SumOfNumbers {
+  int32 first=1;
+  int32 second=2;
+}
+
+message SumRequest {
+  SumOfNumbers sumOfNumbers = 1;
+}
+
+message SumResponse {
+  int32 result=1;
+}
+
+message NumberRequest {
+  int32 number=1;
+}
+
+message NumberResponse {
+  double result=1;
+}
+
+message MaximuNumberResponse {
+  int32 number=1;
+}
+
+service SumOfNumbersService {
+  rpc Sum (SumRequest) returns (SumResponse) {}
+  rpc ComputeAverage(stream NumberRequest) returns (NumberResponse) {}
+  rpc CurrentMaximum(stream NumberRequest) returns (stream MaximuNumberResponse) {}
+} 
